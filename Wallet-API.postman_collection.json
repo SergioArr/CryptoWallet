@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "a715f393-2fb7-4a47-ba21-d3b2e11abadb",
+		"name": "Wallet-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22881266"
+	},
+	"item": [
+		{
+			"name": "getCryptocurrency",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cryptocurrency/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cryptocurrency",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cryptocurrency_id\": 20,\r\n  \"sender\": \"asddsa\",\r\n  \"receiver\": \"aaaa-bbbb-cccc-dddd\",\r\n  \"amount\": 567597.67867867888\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionsByReceiver",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transaction/receiver/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction",
+						"receiver",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionsBySender",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transaction/sender/aaaa-bbbb-cccc-dddd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction",
+						"sender",
+						"aaaa-bbbb-cccc-dddd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
