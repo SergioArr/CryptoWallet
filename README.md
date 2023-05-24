@@ -44,7 +44,10 @@ o utilizando postman puedes importar la colleción: Wallet-API incluida dentro d
 A continuación se detallan los endpoints disponibles en la API:
 
 GET /cryptocurrency/{id}: Obtiene información de una criptomoneda específica.
+
 POST /transaction: Persiste una transacción.
+
 GET /transaction/sender/{sender}: Obtiene el historial de transacciones del remitente especificado.
+
 GET /transaction/receiver/{receiver}: Obtiene el historial de transacciones del receptor especificado.
 
