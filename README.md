@@ -15,7 +15,7 @@ PostgreSQL
 
 ## Configuración del proyecto
 1. Clona el repositorio o descarga el código fuente del proyecto.
-git clone <URL_del_repositorio>
+git clone https://github.com/SergioArr/CryptoWallet.git
 
 2. Instala las dependencias del proyecto.
 npm install
