@@ -1,6 +1,6 @@
-import { Cryptocurrency } from "../entities/cryptocurrency.entity";
+import { CryptocurrencyInterface } from "../interface/cryptocurrency.interface";
 
-export class GetCryptocurrencyDto implements Cryptocurrency {
+export class GetCryptocurrencyDto implements CryptocurrencyInterface {
     id: number;
     name: string;
     createdDate: Date;
