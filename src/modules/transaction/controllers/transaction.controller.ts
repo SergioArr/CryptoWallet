@@ -14,7 +14,7 @@ export class TransactionController {
   @Post()
   @ApiOperation({ summary: 'Create Transaction' })
   @ApiBody({ type: CreateTransactionDto })
-  createTransaction(@Body() transaction: CreateTransactionDto) {
+  createTransaction(@Body() transaction: CreateTransactionDto): Promise<GetTransactionDto> {
     return this.transactionService.createTransaction(transaction);
   }
 
@@ -22,7 +22,7 @@ export class TransactionController {
   @ApiOperation({ summary: 'Search transactions by receiver id' })
   getTransactionByReceiver(
     @Param('receiverId') receiverId: string,
-  ): Promise<Transaction[]> {
+  ): Promise<GetTransactionDto[]> {
     return this.transactionService.getTransactionByReceiver(receiverId);
   }
 
